@@ -4,14 +4,16 @@ import MyOffCan from './Components/MyOffCan';
 import MyRegistrationFrom from './Components/MyRegistrationFrom';
 import MyNavbar from './MyNavbar';
 import 'bootstrap/dist/css/bootstrap.min.css'
+import Myroutes from './Myroutes';
 
 function App() {
   return (
     <div>
-      <MyNavbar/>
+      <Myroutes/>
+      {/* <MyNavbar/>
       <MyRegistrationFrom/>
       <MyLoginForm/>
-      <MyOffCan/>
+      <MyOffCan/> */}
       
     </div>
   );
