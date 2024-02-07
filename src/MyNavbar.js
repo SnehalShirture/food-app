@@ -24,7 +24,7 @@ function MyNavbar() {
             </Nav.Link>
 
             <Nav.Link>
-            <Link to="/myorders">My Orders</Link>
+            <Link to="/MyOrders">My Orders</Link>
             </Nav.Link>
 
             <Nav.Link>

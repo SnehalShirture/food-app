@@ -115,7 +115,7 @@ function MyRegistrationFrom() {
             <Form.Group>
               <Form.Label>Customer Password </Form.Label>
               <Form.Control
-                text="text"
+                text="Password"
                 placeholder="Password"
                 onChange={(e) => setCustPassword(e.target.value)}
               />
