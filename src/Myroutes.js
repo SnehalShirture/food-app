@@ -7,11 +7,9 @@ import Home from "./Components/Home";
 import FoodItems from "./Components/FoodItems";
 import MyLoginForm from "./Components/MyLoginForm";
 import MyOffCan from "./Components/MyOffCan";
-import Cart from "./Components/Cart"
-import Orders from"./Components/Orders"
-
-
-
+import Cart from "./Components/Cart";
+import Orders from "./Components/Orders";
+import OrdersDetails from "./Components/OrderDetails";
 
 function Myroutes() {
   return (
@@ -27,6 +25,10 @@ function Myroutes() {
           <Route path="/profile" element={<Profile />}></Route>
           <Route path="/cart" element={<Cart />}></Route>
           <Route path="/MyOrders" element={<Orders />}></Route>
+          <Route
+            path="/orderdetails/:orderid"
+            element={<OrdersDetails />}
+          ></Route>
         </Routes>
       </BrowserRouter>
     </div>

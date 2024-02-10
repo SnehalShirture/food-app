@@ -27,10 +27,19 @@ const CartSlice = createSlice({
       const crtItem = state.CartItems.find((item) => item._id === payload.iid);
       crtItem.Qty -= 1;
     },
-    
+
+    calculateTotal: (state) => {
+      let totalQty = 0
+      let totalamt = 0
+      state.CartItems.forEach((item) => {
+        totalQty += item.Qty;
+        totalamt += item.Qty * item.foodprice;
+      });
+      state.CartTotalAmt = totalamt;
+    },
   },
 });
 
-export const { clearCart, addItem, incrementQty, decrementQty } =
+export const { clearCart, addItem, incrementQty, decrementQty,calculateTotal } =
   CartSlice.actions;
 export default CartSlice.reducer;
