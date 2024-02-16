@@ -1,0 +1,39 @@
+/* Custom styling for form container */
+.registration {
+    max-width: 400px;
+    margin: auto;
+    padding-top: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #a5f0e5;
+  }
+  
+  /* Centering the form within the parent container */
+  .center-container {
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Adjust as needed for your layout */
+  }
+  
+  /* Optional: Add some styling for the form elements */
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  /* Optional: Style the button */
+  .btn-primary {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  
+
+  .addcust{
+    padding: 20px;
+  }

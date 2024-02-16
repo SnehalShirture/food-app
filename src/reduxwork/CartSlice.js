@@ -16,8 +16,17 @@ const CartSlice = createSlice({
     },
     addItem: (state, action) => {
       const newItem = { ...action.payload, Qty: 1 };
-      state.CartItems = [...state.CartItems, newItem];
+      const isExist = state.CartItems.some((item) => item._id == newItem._id);
+      if (!isExist) {
+        state.CartItems = [...state.CartItems, newItem];
+      } else {
+        alert("Already Added");
+        return;
+      }
       state.ItemCount = state.CartItems.length;
+    },
+    removeItem: (state, action) => {
+      state.items = state.items.filter((item) => item.id !== action.payload.id);
     },
     incrementQty: (state, { payload }) => {
       const crtItem = state.CartItems.find((item) => item._id === payload.iid);
@@ -25,12 +34,18 @@ const CartSlice = createSlice({
     },
     decrementQty: (state, { payload }) => {
       const crtItem = state.CartItems.find((item) => item._id === payload.iid);
-      crtItem.Qty -= 1;
+      if (crtItem.Qty == 0) {
+        state.CartItems = state.CartItems.filter(
+          (item) => item._id !== payload.iid
+        );
+      } else {
+        crtItem.Qty -= 1;
+      }
     },
 
     calculateTotal: (state) => {
-      let totalQty = 0
-      let totalamt = 0
+      let totalQty = 0;
+      let totalamt = 0;
       state.CartItems.forEach((item) => {
         totalQty += item.Qty;
         totalamt += item.Qty * item.foodprice;
@@ -40,6 +55,12 @@ const CartSlice = createSlice({
   },
 });
 
-export const { clearCart, addItem, incrementQty, decrementQty,calculateTotal } =
-  CartSlice.actions;
+export const {
+  clearCart,
+  addItem,
+  incrementQty,
+  decrementQty,
+  calculateTotal,
+  removeItem,
+} = CartSlice.actions;
 export default CartSlice.reducer;

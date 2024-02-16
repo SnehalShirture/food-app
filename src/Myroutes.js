@@ -10,13 +10,14 @@ import MyOffCan from "./Components/MyOffCan";
 import Cart from "./Components/Cart";
 import Orders from "./Components/Orders";
 import OrdersDetails from "./Components/OrderDetails";
+import OrderList from "./Components/OrderList"
 
 function Myroutes() {
   return (
     <div>
       <BrowserRouter>
         <MyNavbar />
-        <MyOffCan />
+        
         <Routes>
           <Route path="/register" element={<MyRegistrationForm />}></Route>
           <Route path="/login" element={<MyLoginForm />}></Route>
@@ -25,6 +26,7 @@ function Myroutes() {
           <Route path="/profile" element={<Profile />}></Route>
           <Route path="/cart" element={<Cart />}></Route>
           <Route path="/MyOrders" element={<Orders />}></Route>
+          <Route path="/orderlist" element={<OrderList />}></Route>
           <Route
             path="/orderdetails/:orderid"
             element={<OrdersDetails />}

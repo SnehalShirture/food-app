@@ -1,10 +1,11 @@
 import axios from "axios";
 import React, { useState } from "react";
-import { Row, Container, Form, Button, Col } from "react-bootstrap";
+import { Row, Container, Form, Button, Col, Image } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import { login } from "../reduxwork/UserSlice";
 import { useDispatch } from "react-redux";
-
+import loginimg from "../Images/Login.jpg";
+import "./Login.css";
 function MyLoginForm() {
   const dispatcher = useDispatch();
   const [CustEmail, setCustomeremail] = useState("");
@@ -37,47 +38,46 @@ function MyLoginForm() {
   };
 
   return (
-    <div>
-      <Container>
-        <Row>
-          <h2>||Login Form ||</h2>
-          <Form>
-            <Row>
-              <Form.Group>
-                <Form.Label>Customer Email</Form.Label>
-                <Form.Control
-                  type="email"
-                  placeholder="Enter User Email"
-                  onChange={(e) => setCustomeremail(e.target.value)}
-                />
-              </Form.Group>
-            </Row>
-            <Row>
-              <Form.Group>
-                <Form.Label>Customer Password</Form.Label>
-                <Form.Control
-                  type="Password"
-                  placeholder="Enter User Password"
-                  onChange={(e) => setCustomerpassword(e.target.value)}
-                />
-              </Form.Group>
-            </Row>
-            <Form.Group>
+    <>
+      <Container fluid className="login">
+        <div className="form">
+          <Row>
+            <h2>Login Form</h2>
+            <Form>
               <Row>
-                <Button onClick={() => addlogin()}>Login</Button>
+                <Form.Group className="custlogin">
+                  <Form.Label>Customer Email</Form.Label>
+                  <Form.Control
+                    type="email"
+                    placeholder="Enter User Email"
+                    onChange={(e) => setCustomeremail(e.target.value)}
+                  />
+                </Form.Group>
               </Row>
-            </Form.Group>
-          </Form>
-        </Row>
+              <Row>
+                <Form.Group className="custlogin"> 
+                  <Form.Label>Customer Password</Form.Label>
+                  <Form.Control
+                    type="Password"
+                    placeholder="Enter User Password"
+                    onChange={(e) => setCustomerpassword(e.target.value)}
+                  />
+                </Form.Group>
+              </Row>
+              <Row>
+              <Form.Group className="button">
+                <Button onClick={() => addlogin()}>Login</Button>
+              </Form.Group>
+              </Row>
+            </Form>
+          </Row>
+        </div>
 
-        <Row>
-          <Col>
-            <h3>{CustEmail}</h3>
-            <h3>{CustPassword}</h3>
-          </Col>
-        </Row>
+        <div className="LoginImage">
+          <Image className="image" src={loginimg} />
+        </div>
       </Container>
-    </div>
+    </>
   );
 }
 

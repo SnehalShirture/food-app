@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Card, Container, Row, Col } from "react-bootstrap";
+import { Card, Container, Row, Col, Button } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 
 function OrderDetails() {
@@ -21,6 +21,22 @@ function OrderDetails() {
         console.log(err);
       });
   }, {});
+
+  const orderstatus =()=>{
+    const ordered ={
+      oid:orderid,
+      OrderStatus:"Cancel"
+    }
+    axios
+    .post("http://localhost:5000/api/updateOrderStatus", ordered)
+    .then((result) => {
+      console.log('Data',result)
+      window.location.reload(false)
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+  }
   return (
     <div>
       OrderDetails
@@ -51,6 +67,11 @@ function OrderDetails() {
               </Col>
             );
           })}
+        </Row>
+        <Row>
+          <Button onClick={() => orderstatus()}>
+            Cancel
+          </Button>
         </Row>
       </Container>
     </div>

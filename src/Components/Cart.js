@@ -76,7 +76,9 @@ function Cart() {
            
           
         </Row>
-        <Col><h4>Total:{CartTotalAmt}</h4></Col>
+        <Col><h4>
+          Total: <i className="bi bi-7-square-fill"></i> {CartTotalAmt}
+        </h4></Col>
         <Button onClick={() => addOrder()}>Placed Order</Button>
       </Container>
     </div>

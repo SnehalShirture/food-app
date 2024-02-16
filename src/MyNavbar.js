@@ -1,13 +1,17 @@
 import React from "react";
 import { Nav, Navbar } from "react-bootstrap";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 
+  
+
 function MyNavbar() {
+const { ItemCount  } = useSelector((state) => state.cart);
   return (
     <div>
       <Navbar collapseOnSelect variant="dark" bg="dark" expand="lg">
-        <Navbar.Brand>MyfoodCourt</Navbar.Brand>
+        <Navbar.Brand>Rasoi Rhapsody</Navbar.Brand>
         <Navbar.Toggle aria-control="responsive-nav-bar"> </Navbar.Toggle>
         <Navbar.Collapse id="responsive-nav-bar">
           <Nav className="me-auto">
@@ -31,7 +35,7 @@ function MyNavbar() {
             </Nav.Link>
 
             <Nav.Link>
-            <Link to="/cart">Cart </Link>
+            <Link to="/cart">Cart {ItemCount}</Link>
             </Nav.Link>
 
             <Nav.Link>
@@ -39,7 +43,11 @@ function MyNavbar() {
             </Nav.Link>
 
             <Nav.Link>
-              <Link to="/register">Register </Link>
+              <Link to="/register">Registration </Link>
+            </Nav.Link>
+
+            <Nav.Link>
+              <Link to="/orderlist">Order List </Link>
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

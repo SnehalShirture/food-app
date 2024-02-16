@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { Container, Form, Row , Button } from "react-bootstrap";
+import { Container, Form, Row, Button, Card } from "react-bootstrap";
 import axios from "axios";
+import "./Registration.css";
 
 function MyRegistrationFrom() {
   const [CustFirstName, setFirstName] = useState("");
@@ -35,9 +36,10 @@ function MyRegistrationFrom() {
   };
 
   return (
-    <div>
-      <Container>
-        <h2>!!My Registration Form !!</h2>
+    < >
+      <Container >
+        <div className="registration">
+        <h2>Registration Form</h2>
         <Row>
           <Form>
             <Form.Group>
@@ -122,11 +124,12 @@ function MyRegistrationFrom() {
             </Form.Group>
           </Form>
         </Row>
-        <Row>
+        <Row className="addcust"> 
           <Button onClick={() => submitForm()}>Add Customer</Button>
         </Row>
+        </div>
       </Container>
-    </div>
+    </>
   );
 }
 
