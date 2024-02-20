@@ -1,39 +1,58 @@
-/* Custom styling for form container */
-.registration {
-    max-width: 400px;
-    margin: auto;
-    padding-top: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: #a5f0e5;
+/* Registration.css */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  
-  /* Centering the form within the parent container */
-  .center-container {
-   
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh; /* Adjust as needed for your layout */
+  to {
+    opacity: 1;
   }
-  
-  /* Optional: Add some styling for the form elements */
-  .form-group {
-    margin-bottom: 15px;
-  }
-  
-  /* Optional: Style the button */
-  .btn-primary {
-    background-color: #007bff;
-    color: #fff;
-  }
-  
-  .btn-primary:hover {
-    background-color: #0056b3;
-  }
-  
+}
+.registrationbody {
+  margin: 0;
+  padding: 0;
 
-  .addcust{
-    padding: 20px;
-  }
+  background-size: cover;
+  background-position: center;
+  font-family: 'Arial', sans-serif;
+  background-image: url('../Images/registration.jpg');
+}
+.registration {
+  max-width: 600px;
+  margin: 50px auto 20px; /* Add margin to the top */
+  animation: fadeIn 2s ease-in-out;
+ 
+  padding: 20px;
+  background-color: #dfeded43;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  color: #007bff; /* Bootstrap primary color */
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  font-weight: bold;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ced4da; /* Bootstrap default input border color */
+  border-radius: 5px;
+}
+
+.addcust {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* You can add more styling as per your requirements */
+

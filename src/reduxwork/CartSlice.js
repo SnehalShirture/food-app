@@ -26,7 +26,8 @@ const CartSlice = createSlice({
       state.ItemCount = state.CartItems.length;
     },
     removeItem: (state, action) => {
-      state.items = state.items.filter((item) => item.id !== action.payload.id);
+      state.CartItems = state.CartItems.filter((item) => item._id !== action.payload._id);
+      state.ItemCount = state.CartItems.length;
     },
     incrementQty: (state, { payload }) => {
       const crtItem = state.CartItems.find((item) => item._id === payload.iid);

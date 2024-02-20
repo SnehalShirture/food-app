@@ -7,9 +7,11 @@
   }
   
   .profile-card {
-    width: 400px;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    min-width: 300px; /* Set a minimum width */
+    min-height: 300px; /* Set a minimum height */
   }
   
   .profile-card-body {

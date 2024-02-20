@@ -1,0 +1,82 @@
+/* Navbar styles */
+.Brand {
+  font-size: 32px; /* Slightly bigger font size */
+  font-family: 'Indie Flower', cursive;
+  text-align: center;
+}
+
+.Brand span {
+  display: inline-block;
+  transition: transform 0.3s ease-in-out;
+}
+
+.food-emoji {
+  font-size: 36px; /* Size for the food emoji */
+  margin-right: 10px; /* Adjust spacing between emoji and text */
+}
+
+/* Attractive and slightly darker color scheme */
+.G { color: #e74c3c; }
+.o1 { color: #f39c12; }
+.o2 { color: #3498db; }
+.g { color: #2ecc71; }
+.l { color: #e66767; }
+.e { color: #e74c3c; font-weight: bold; }
+
+.Brand:hover span {
+  transform: scale(1.2);
+}
+
+.Brand span:nth-child(odd) {
+  font-style: italic;
+}
+
+.Brand span:nth-child(even) {
+  font-weight: bold;
+}
+
+.Brand span {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(to right, #000, #222);
+  padding: 5px 10px;
+  border-radius: 8px;
+}
+
+.Brand {
+  background: linear-gradient(to right, #e97676, #555);
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.navbar-custom {
+    background-color: #141614; /* Background color of the Navbar */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle box shadow for lift effect */
+  }
+  
+  
+  
+  .navbar-custom .nav-link {
+    color: #f6b51e;
+    margin-right: 15px;
+    transition: color 0.3s ease-in-out; /* Smooth color transition on hover */
+  }
+  
+  .navbar-custom .nav-link:hover {
+    color: #fc0f82; /* Yellow color on hover */
+  }
+  
+  
+  
+  .navbar-custom .navbar-collapse {
+    background-color: #1414157d; /* Background color of the collapsed Navbar */
+  }
+  
+  /* Add media query to adjust styles for smaller screens if needed */
+  @media (max-width: 768px) {
+    .navbar-custom .nav-link {
+      margin-right: 0;
+    }
+  }
+  

@@ -37,7 +37,7 @@ function MyRegistrationFrom() {
 
   return (
     < >
-      <Container >
+      <Container  className="registrationbody">
         <div className="registration">
         <h2>Registration Form</h2>
         <Row>

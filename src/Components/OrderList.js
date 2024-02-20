@@ -25,8 +25,8 @@ const OrderList = ({ orderStatus }) => {
       });
   }, []);
   return <div>
-    <Container>
-        <Row>
+    <Container className="order-details-container">
+        <Row className="customer-details">
           {orderData.map((order) => {
             return (
               <Col sm={12} md={6} lg={3}>
