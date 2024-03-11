@@ -1,9 +1,39 @@
-/* Navbar styles */
-.Brand {
-  font-size: 32px; /* Slightly bigger font size */
-  font-family: 'Indie Flower', cursive;
-  text-align: center;
+@keyframes scaleUp {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05);
+  }
 }
+
+.Brand {
+  font-family: 'Playfair Display', serif; /* Choose an elegant and high-class font */
+  font-weight: bold; /* Make the text bold */
+  font-size: 36px; /* Adjust font size according to your design */
+  letter-spacing: 1.5px; /* Adjust letter spacing for a clean and elegant look */
+  color: #34495e; /* Set a sophisticated text color */
+  text-transform: uppercase; /* Uppercase the text for a refined look */
+  position: relative; /* Position for pseudo-element styling */
+  transition: color 0.3s ease-in-out; /* Smooth color transition on hover */
+}
+
+.Brand::before {
+  content: '\00a9'; /* Add a copyright symbol using Unicode character */
+  font-size: 18px; /* Adjust the size of the symbol */
+  color: #2c3e50; /* Set the color of the symbol */
+  margin-right: 5px; /* Add spacing between text and symbol */
+}
+
+.Brand:hover {
+  color: #2980b9; /* Change text color on hover for a subtle effect */
+  animation: scaleUp 0.3s ease-in-out; /* Apply scaling animation on hover */
+}
+
+/* Add more styles as needed */
+
+
+
 
 .Brand span {
   display: inline-block;
@@ -15,13 +45,7 @@
   margin-right: 10px; /* Adjust spacing between emoji and text */
 }
 
-/* Attractive and slightly darker color scheme */
-.G { color: #e74c3c; }
-.o1 { color: #f39c12; }
-.o2 { color: #3498db; }
-.g { color: #2ecc71; }
-.l { color: #e66767; }
-.e { color: #e74c3c; font-weight: bold; }
+
 
 .Brand:hover span {
   transform: scale(1.2);
@@ -43,7 +67,7 @@
 }
 
 .Brand {
-  background: linear-gradient(to right, #e97676, #555);
+  background: linear-gradient(to right, #100f0f, #111010);
   color: #fff;
   padding: 12px 20px;
   border-radius: 15px;

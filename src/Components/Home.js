@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import "./Home.css";
+
 import { addItem, removeItem } from "../reduxwork/CartSlice"; // Import removeItem action
 import { useDispatch, useSelector } from "react-redux";
 
@@ -33,7 +34,7 @@ const Home = () => {
 
             return (
               <Col sm={12} md={6} lg={3} key={food.id}>
-                <Card>
+                <Card className="card">
                   <Card.Img
                     className="crd-image"
                     src={`http://localhost:5000${food.foodimg}`}

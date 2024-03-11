@@ -6,18 +6,18 @@ import MyNavbar from "./MyNavbar";
 import Home from "./Components/Home";
 import FoodItems from "./Components/FoodItems";
 import MyLoginForm from "./Components/MyLoginForm";
-import MyOffCan from "./Components/MyOffCan";
+
 import Cart from "./Components/Cart";
 import Orders from "./Components/Orders";
 import OrdersDetails from "./Components/OrderDetails";
-import OrderList from "./Components/OrderList"
+import OrderList from "./Components/OrderList";
 
 function Myroutes() {
   return (
     <div>
       <BrowserRouter>
         <MyNavbar />
-        
+
         <Routes>
           <Route path="/register" element={<MyRegistrationForm />}></Route>
           <Route path="/login" element={<MyLoginForm />}></Route>

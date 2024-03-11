@@ -16,22 +16,17 @@ function MyNavbar() {
         expand="lg"
         className="navbar-custom"
       >
-         <Navbar.Brand className="Brand">
-        <span className="G">R</span>
-        <span className="o1">a</span>
-        <span className="o2">s</span>
-        <span className="g">o</span>
-        <span className="l">i</span>
-        <span className="e"> Rhapsody</span>
-      </Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-nav-bar" />
+        <Navbar.Brand className="Brand">
+        Karma Kitchen
+        </Navbar.Brand>
+        <Navbar.Toggle arial-controls="responsive-nav-bar" />
         <Navbar.Collapse id="responsive-nav-bar">
           <Nav className="me-auto">
             <Nav.Link className="navbar-custom">
               <Link to="/" className="nav-link">
                 Home
               </Link>
-            </Nav.Link >
+            </Nav.Link>
 
             <Nav.Link className="navbar-custom">
               <Link to="/fooditems" className="nav-link">
